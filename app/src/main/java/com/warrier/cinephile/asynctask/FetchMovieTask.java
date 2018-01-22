@@ -176,7 +176,6 @@ public class FetchMovieTask extends AsyncTask<String, Void, Integer> {
 
         try {
             // Construct the URL for the movieAPI query
-            // Possible parameters are avaiable at OWM's forecast API page, at
 
             String MOVIE_BASE_URL = "https://api.themoviedb.org/3/";
 
@@ -279,7 +278,6 @@ public class FetchMovieTask extends AsyncTask<String, Void, Integer> {
                 }
             }
         }
-        // This will only happen if there was an error getting or parsing the forecast.
         return inserted;
     }
     @Override
