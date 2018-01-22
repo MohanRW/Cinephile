@@ -239,7 +239,7 @@ public class MovieContract {
             return ContentUris.withAppendedId(CONTENT_URI, id);
         }
 
-        //content://work....../people/peopleId
+       
         public static Uri buildPeopleUriWithPeopleId(String peopleId) {
             return CONTENT_URI.buildUpon().appendPath(peopleId).build();
         }
