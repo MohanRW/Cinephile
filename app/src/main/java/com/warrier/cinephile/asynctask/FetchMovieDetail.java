@@ -432,7 +432,6 @@ public class FetchMovieDetail extends AsyncTask<String, Void, Void> {
 
         try {
             // Construct the URL for the movieAPI query
-            // Possible parameters are avaiable at OWM's forecast API page, at
             final String MOVIE_BASE_URL =
                     "http://api.themoviedb.org/3/movie/";
             final String APPID_PARAM = "api_key";
@@ -454,7 +453,6 @@ public class FetchMovieDetail extends AsyncTask<String, Void, Void> {
             InputStream inputStream = urlConnection.getInputStream();
             StringBuilder buffer = new StringBuilder();
             if (inputStream == null) {
-                // Nothing to do.
                 return null;
             }
             reader = new BufferedReader(new InputStreamReader(inputStream));
@@ -468,7 +466,6 @@ public class FetchMovieDetail extends AsyncTask<String, Void, Void> {
             }
 
             if (buffer.length() == 0) {
-                // Stream was empty.  No point in parsing.
                 return null;
             }
             movieJsonStr = buffer.toString();
@@ -493,7 +490,6 @@ public class FetchMovieDetail extends AsyncTask<String, Void, Void> {
                 }
             }
         }
-        // This will only happen if there was an error getting or parsing the forecast.
         return null;
     }
 
